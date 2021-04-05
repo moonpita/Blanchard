@@ -1,0 +1,67 @@
+$main: #9D5CD0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+}
+
+p {
+    color: #333;
+}
+
+a {
+    color: $main;
+}
+
+.burger {
+    display: none;
+    opacity: 0
+}
+.search {
+    display: none;
+    opacity: 0;
+    &-input {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@import "headerHero.scss";
+@import "aboutGalary.scss";
+@import "catalogEvents.scss";
+@import "editionsProjects.scss";
+@import "contactsFooter.scss";
+
+
+
+.container {
+    width: 1604px;
+    margin: 0 auto;
+}
+
+@import "adaptive.scss";
+
+.swiper-button-prev,
+.swiper-button-next {
+    &:focus {
+        border: 2px solid $main;
+    }
+}

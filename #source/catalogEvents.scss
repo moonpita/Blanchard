@@ -1,0 +1,398 @@
+.catalog {
+
+    &__title {
+        display: inline-block;
+        margin-right: 41px;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 65px;
+        color: #333;
+    }
+}
+
+.title-nav {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.tabs {
+
+    &__nav {
+        display: flex;
+        align-content: center;
+        margin: auto 0;
+    }
+    &-nav__item {
+        width: 46px;
+        height: 46px;
+        margin: auto 0;
+        padding: 10px;
+        box-sizing: content-box;
+        border: 2px solid transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        transition: filter 0.25s ease-in-out;
+        transition: border 0.25s ease-in-out;
+        &.is-active {
+            border: 2px solid #9D5CD0;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &:first-child {
+            background-image: url(../img/catalogEvents/fr.svg);
+        }
+        &:nth-child(2) {
+            background-image: url(../img/catalogEvents/gr.svg);
+        }
+        &:nth-child(3) {
+            background-image: url(../img/catalogEvents/it.svg);
+        }
+        &:nth-child(4) {
+            background-image: url(../img/catalogEvents/ru.svg);
+        }
+        &:nth-child(5) {
+            background-image: url(../img/catalogEvents/bg.svg);
+        }
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        &:hover {
+            filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+        }
+        &:active {
+            filter: none;
+            box-sizing: border-box;
+            padding: 0;
+            margin-left: 12px;
+            margin-right: 42px;
+            border: 2px solid $main;
+        }
+        &:focus {
+            filter: none;
+            box-sizing: border-box;
+            padding: 0;
+            margin-left: 12px;
+            margin-right: 42px;
+            border: 2px solid $main;
+        }
+    }
+
+    &__description {
+        margin-top: 13px;
+        line-height: 32px;
+        color: #333;
+    }
+}
+
+.tab {
+    display: none;
+    margin-top: 50px;
+}
+
+.is-active {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+// Tabs inside accordion 
+#accordion1,
+#accordion2,
+#accordion3,
+#accordion4,
+#accordion5  {
+    width: 50%;
+}
+
+#accordion1,
+#accordion2,
+#accordion3,
+#accordion4,
+#accordion5 {
+    & h3{
+        & div {
+            display: flex;
+            justify-content: space-between;
+            background-color: inherit;
+            height: 115px;
+            border: none;
+            border-top: 1px solid #cacaca;
+            &:last-child {
+                border-bottom: 1px solid #cacaca;
+            }
+        }
+    }
+    & > div {
+        border: none;
+        border-top: 1px solid $main;
+        border-bottom: 1px solid $main;
+    }
+}
+
+.accordion {
+    &__tabs-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        max-height: 341px;
+        padding: 25px 0px;
+    }
+    &__tabs-content {
+        width: calc(50% - 50px);
+        margin-right: auto;
+    }
+    &__title {
+        display: block;
+        margin: auto 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1;
+        color: #333;
+    }
+    &__button {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: auto 0;
+        border-radius: 50%;
+        background-color: #ececec;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 1px;
+            background-color: #000;
+            transform-origin: right;
+            transform: translateX(13px) translateY(31px) rotate(45deg);
+
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 1px;
+            background-color: #000;
+            transform-origin: left;
+            transform: translateX(25px) translateY(31px) rotate(-45deg);
+        }
+    }
+}
+
+.tab-nav-inside {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.tab-inside {
+    display: none;
+    width: 100%;
+    margin-right: 50px;
+}
+
+.is-active-inside {
+    display: block;
+}
+.is-active-nav-inside{
+    color: $main;
+}
+.ui-accordion .ui-accordion-header {
+    margin-top: 0px;
+}
+
+.artist {
+    max-width: 750px;
+
+    &__picture {
+        width: 100%;
+        height: auto;
+    }
+    &__name {
+        margin-top: 30px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        color: #333;
+    }
+    &__years {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+    }
+    &__description {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #333;
+    }
+}
+
+// EVENTS
+
+.events {
+    &__title {
+        margin-top: 80px;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 65px;
+        color: #333;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 13px;
+        &__item {
+            border: 1px solid #cacaca;
+            width: 500px;
+            min-height: 700px;
+            &:not(:nth-child(3n)) {
+                margin-right: 50px;
+            }  
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        width: 100%;
+        height: 707px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        & > .events__list__item {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__button {
+        display: block;
+        position: relative;
+        width: 180px;
+        height: 58px;
+        margin: 37px auto 127px auto;
+        padding: 0px 20px 5px 20px;
+
+        font-size: 18px;
+        line-height: 55px;
+        font-weight: 700;
+        text-align: center;
+        color: $main;
+        background-color: transparent;
+        border-radius: 25px;
+        border: 2px solid $main;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: #fff;
+            background-color: $main;
+        }
+        &:active {
+            color: #fff;
+            background-color: #7943A4;
+            border: 2px solid #D1A9F0;
+        } 
+        &::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border: 2px solid #C283F3;
+            border-radius: 100px;
+            opacity: 0;
+        }
+        &:focus::after {
+            opacity: 1;
+        }
+
+    }
+}
+
+.swiper-container-events {
+    display: none;
+    padding-bottom: 30px;
+}
+.swiper-pagination {
+    &-events {
+        top: calc(100% - 40px);
+    }
+    &-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 7px;
+        &-active {
+            width: 10px;
+            height: 10px;
+            background-color: #666;
+        }
+    }
+}
+
+#events__checkbox {
+    display: none;
+}
+
+#events__checkbox:checked + .events__wrapper {
+    height: auto;
+}
+#events__checkbox:checked ~ .events__button {
+    display: none;
+}
+
+.description {
+    position: relative;
+    width: 500px;
+    min-height: 400px;
+    padding: 0px 45px 50px 50px;
+    box-sizing: border-box;
+    &__place,
+    &__date {
+        display: block;
+        position: absolute;
+        top: 13px;
+        right: 19px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+    }
+    &__date {
+        top: 29px
+    }
+    &__title {
+        padding-top: 49px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+        color: #333;
+    }
+    &__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 32px;
+        color: #333;
+    }
+    &__more {
+        position: absolute;
+        bottom: 48px;
+        &--link {
+            color: $main;
+            text-decoration: underline;
+
+        }
+    }
+}
+
+.swiper-container-events {
+    width: 100%;
+    min-height: 700px;
+    margin-top: 30px;
+}
